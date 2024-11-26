@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Discos</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Lista de Discos</h1>
+  
+  <a href="/discos/cadastrar" class="btn">Adicionar Novo Disco</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ano de Lançamento</th>
+        <th>Artista</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% discos.forEach((disco) => { %>
+        <tr>
+          <td><%= disco.id %></td>
+          <td><%= disco.nome %></td>
+          <td><%= disco.ano_lancamento %></td>
+          <td><%= disco.artista ? disco.artista.nome : 'Sem artista' %></td>
+          <td>
+            <a href="/discos/editar/<%= disco.id %>" class="btn btn-edit">Editar</a>
+            
+            <form action="/discos/remover/<%= disco.id %>" method="POST" style="display:inline;">
+              <button type="submit" class="btn btn-delete">Remover</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="/" class="btn">Voltar para Home</a>
+</body>
+</html>

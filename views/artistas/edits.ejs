@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Artista</title>
+</head>
+<body>
+  <h1>Editar Artista</h1>
+
+  <form action="/artistas/editar/<%= artista.id %>" method="POST">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" value="<%= artista.nome %>" required><br><br>
+
+    <label for="genero_musical">Gênero Musical</label>
+    <input type="text" id="genero_musical" name="genero_musical" value="<%= artista.genero_musical %>" required><br><br>
+
+    <label for="nacionalidade">Nacionalidade</label>
+    <input type="text" id="nacionalidade" name="nacionalidade" value="<%= artista.nacionalidade %>" required><br><br>
+
+    <button type="submit">Salvar Alterações</button>
+  </form>
+
+  <a href="/artistas">Voltar para a lista de artistas</a>
+</body>
+</html>

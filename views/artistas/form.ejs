@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Artista</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Cadastrar Artista</h1>
+  <form action="/artistas/cadastrar" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <br>
+
+    <label for="nacionalidade">Nacionalidade:</label>
+    <input type="text" id="nacionalidade" name="nacionalidade">
+    <br>
+
+    <label for="genero_musical">Gênero Musical:</label>
+    <input type="text" id="genero_musical" name="genero_musical">
+    <br>
+
+    <button type="submit" class="btn">Cadastrar</button>
+    <a href="/artistas" class="btn">Cancelar</a>
+  </form>
+</body>
+</html>

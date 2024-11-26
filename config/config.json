@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "catalogo_discos",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

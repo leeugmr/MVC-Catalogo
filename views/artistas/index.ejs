@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Artistas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Lista de Artistas</h1>
+  
+  <a href="/artistas/cadastrar" class="btn">Adicionar Novo Artista</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Nacionalidade</th>
+        <th>Gênero Musical</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% artistas.forEach((artista) => { %>
+        <tr>
+          <td><%= artista.id %></td>
+          <td><%= artista.nome %></td>
+          <td><%= artista.nacionalidade %></td>
+          <td><%= artista.genero_musical %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="/" class="btn">Voltar</a>
+</body>
+</html>

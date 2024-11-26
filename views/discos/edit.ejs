@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Disco</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Editar Disco</h1>
+  <form action="/discos/editar/<%= disco.id %>" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="<%= disco.nome %>" required>
+    <br>
+
+    <label for="ano_lancamento">Ano de Lançamento:</label>
+    <input type="number" id="ano_lancamento" name="ano_lancamento" value="<%= disco.ano_lancamento %>" required>
+    <br>
+
+    <label for="capa">URL da Capa:</label>
+    <input type="text" id="capa" name="capa" value="<%= disco.capa %>">
+    <br>
+
+    <label for="faixas">Faixas (separadas por vírgula):</label>
+    <input type="text" id="faixas" name="faixas" value="<%= disco.faixas ? disco.faixas.join(',') : '' %>">
+    <br>
+
+    <label for="artista_id">ID do Artista:</label>
+    <input type="number" id="artista_id" name="artista_id" value="<%= disco.artista_id %>" required>
+    <br>
+
+    <button type="submit" class="btn">Salvar</button>
+    <a href="/discos" class="btn">Cancelar</a>
+  </form>
+</body>
+</html>
